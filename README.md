@@ -13,6 +13,11 @@ Track your **WPM, Accuracy, Mistakes**, and even your progress graphically with 
 🎮 _Play. Type. Improve. Repeat._
 
 ---
+## 🖼 Preview
+
+![Typing Game Screenshot](screenshot.png)
+
+---
 
 ## 🔥 Features
 
