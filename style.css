@@ -2,20 +2,60 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body{
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-    display: flex;
-    padding: 0 10px;
-    align-items: center;
-    justify-content: center;
-    background-color: #982a2a;
+    margin: 0;
+    background: linear-gradient(-45deg, #ff512f, #dd2476, #ff6a00, #f12711);
+    background-size: 400% 400%;
+    animation: gradientBG 5s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.game-banner {
+    background: #FF9149;
+    color: #102E50;
+    text-align: center;
+    padding: 40px 20px 30px;
+    border-bottom: 4px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.game-banner h1 {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: 1px;
+    animation: move 1s infinite;
+}
+@keyframes move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.game-banner p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .wrapper{
     width: 770px;
+    margin: 40px auto;
     padding: 35px;
     background: #fff;
     border-radius: 10px;
@@ -98,4 +138,53 @@ body{
 ::selection{
     color: #fff;
     background: #982a2a;
+}
+
+canvas#typingChart {
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#toggleMusic {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#toggleMusic:hover {
+    background-color: #3700b3;
+}
+
+.footer{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: #102E50;
+    background: 2px #FFF1D5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.footer a{
+    text-decoration: none;
+    color: #102E50;
+}
+.footer ion-icon,a:hover{
+    color: #E78B48;
+}
+
+.footer p{
+    border: 10px auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }

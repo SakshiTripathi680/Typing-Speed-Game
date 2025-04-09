@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing game</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+    <!-- Header section with game title and description -->
+    <header class="game-banner">
+        <h1>⌨️ Typing Speed Game</h1>
+        <p><u>Test your speed. Track your skills. Beat your best.</u></p>
+      </header>
+    <!-- Main content of the game -->
     <div class="wrapper">
         <input type = "text" class="input-field">
         <div class="content-box">
@@ -31,11 +40,43 @@
                         <p>CPM :</p>
                         <span><b>0</b></span>
                     </li>
+                    <li class="accuracy">
+                        <p >Accuracy:</p>
+                        <span><b>0%</b></span>
+                    </li>
                 </ul>
                 <button>Try Again</button>
+                <ul class="best-scores">
+                    <li>
+                        <p>🏆 Best WPM: <span><b id="bestWpm">0</b></span></p>
+                    </li>
+                    <li>
+                        <p>🏆 Best CPM: <span><b id="bestCpm">0</b></span></p>
+                    </li>
+                </ul>
             </div>
         </div>
+        <!-- Canvas for Chart -->
+        <canvas id="typingChart" width="400" height="200"></canvas>
     </div>
+
+    <audio id="bg-music" loop>
+        <source src="/Background Music/bg_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="toggleMusic">🔊 Mute Music</button>
+
+    <div class="footer">
+        <p><u>Hope You Enjoyed The Game</u></p>
+        <p>Want to checkout more cool projects then checkout my socials: 
+            <ion-icon name="logo-linkedin"></ion-icon> <a href="https://www.linkedin.com/in/sakshi-tripathi-523a01212">LinkedIn</a> ||
+            <ion-icon name="logo-github"></ion-icon> <a href="https://github.com/SakshiTripathi680">Github</a>
+        </p>
+    </div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
